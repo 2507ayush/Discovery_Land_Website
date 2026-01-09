@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    background-color: black;    
+}
+.back {
+    background-image: url("https://www.datocms-assets.com/128889/1714657126-bakers-bay-golf-and-ocean-club-copy.jpg?auto=format&fit=max&h=3000&w=2000");
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    position: relative;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background-color: rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+
+.nav-l a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+
+.nav-l a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0%;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s ease;
+}
+
+
+.nav-l a:hover::after {
+    width: 100%;
+}
+
+.menu {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+
+.nav.scrolled {
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.nav.scrolled .nav-l a {
+    color: black;
+}
+
+.nav.scrolled .menu {
+    color: black;
+}
+
+.logo img {
+    height: 35px;
+    transition: filter 0.3s ease;
+}
+
+
+.nav .logo img {
+    filter: invert(1) brightness(2);
+}
+
+
+.nav.scrolled .logo img {
+    filter: invert(0) brightness(1);
+}
+
+.nav-l {
+    padding-right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-l a {
+    text-decoration: none;
+    color: #f1eaea;
+    font-size: 14px;
+}
+
+.menu {
+    display: inline;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+.hell {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 70px;
+}
+
+
+.container{
+    max-width: 1200px;
+    /* margin: auto; */
+    border-bottom: 1px solid gray;
+}
+.container1{
+    display: flex;
+    flex-direction: row;
+}
+.container1 img{
+    width: 32.9vw;
+    height: 40vh;
+}
+
+.container1 h5{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
+
+.foot-d {
+    background: #000;
+    color: #fff;
+    padding: 80px 100px 30px;
+    z-index: -10;
+}
+
+.foot-w {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.foot-i img {
+    width: 40px;
+    opacity: 0.8;
+}
+
+.foot-c {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.foot-heading {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+.foot-h.mt {
+    margin-top: 8px;
+    opacity: 0.5;
+}
+
+.foot-h {
+    margin-top: 8px;
+    opacity: 0.5;
+}
+
+.foot-c a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    width: fit-content;
+}
+
+.foot-c a:hover {
+    text-decoration: underline;
+}
+
+.foot-c a.active {
+    text-decoration: underline;
+}
+
+.foot-b {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 60px;
+    padding-top: 20px;
+    font-size: 13px;
+    color: #ccc;
+}
+
+
+@media screen and (max-width: 780px) {
+
+    /* NAVBAR */
+    .nav {
+        padding: 0 20px;
+        height: 70px;
+    }
+
+    .logo img {
+        height: 28px;
+    }
+
+    .nav-l {
+        gap: 12px;
+        padding-right: 0;
+    }
+
+    .nav-l a {
+        font-size: 12px;
+    }
+
+    /* HERO SECTION */
+    .back {
+        height: 60vh;
+    }
+
+    .hell {
+        font-size: 42px;
+    }
+
+    /* GALLERY CONTAINER */
+    .container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .container1 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container1 img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .container1 h5 {
+        font-size: 16px;
+        margin: 20px 0 30px;
+    }
+
+    /* FOOTER */
+    .foot-d {
+        padding: 60px 20px 30px;
+    }
+
+    .foot-w {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .foot-i img {
+        margin: auto;
+    }
+
+    .foot-c {
+        align-items: center;
+    }
+
+    .foot-b {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+        font-size: 12px;
+    }
+}
